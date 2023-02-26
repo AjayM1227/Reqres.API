@@ -55,7 +55,15 @@ namespace Reqres.APITests.Utils
             return client.Execute(restRequest);
         }
 
-       
+       /// <summary>
+        /// Get Response by enforcing TLS 1.2 on Targetprocess side
+        /// </summary>
+        /// <returns>IRestResponse</returns>
+        public static IRestResponse GetResponseTLSTargetprocess()
+        {
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol | System.Net.SecurityProtocolType.Tls12;
+            return client.Execute(restRequest);
+        }
         #endregion GET Response
 
         #region POST Request
