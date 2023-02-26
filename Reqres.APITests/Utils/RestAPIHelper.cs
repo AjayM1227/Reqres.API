@@ -30,7 +30,7 @@ namespace Reqres.APITests.Utils
         #region GET Request
 
         /// <summary>
-        /// Create request
+        /// Creating the get request
         /// </summary>
         /// <returns>restRequest</returns>
         public static RestRequest GETRequest()
@@ -39,79 +39,6 @@ namespace Reqres.APITests.Utils
             restRequest.AddHeader("Accept", "application/json");
             restRequest.AddHeader("Method", "GET");
             restRequest.AddHeader("ContentType", "application/json");
-            return restRequest;
-        }
-
-        /// <summary>
-        /// Create request
-        /// </summary>
-        /// <param name="quotecntr">This is quotecntr</param>
-        /// <returns>restRequest</returns>
-        public static RestRequest GETRequest(string brandName)
-        {
-            restRequest = new RestRequest(Method.GET);
-            restRequest.AddParameter("brandName", brandName, ParameterType.UrlSegment);
-            restRequest.AddHeader("Accept", "application/json");
-            return restRequest;
-        }
-
-        /// <summary>
-        /// Create request
-        /// </summary>
-        /// <param name="quotecntr">This is quote cntr number</param>
-        /// <returns>Return rest request.</returns>
-        public static RestRequest GETRequest(int quotecntr)
-        {
-            restRequest = new RestRequest(Method.GET);
-            restRequest.AddParameter("quotecntr", quotecntr, ParameterType.UrlSegment);
-            restRequest.AddHeader("Accept", "application/json");
-            return restRequest;
-        }
-
-        /// <summary>
-        /// Create request with brandName and  quotecntr
-        /// </summary>
-        /// <param name="brandName">This is brand name.</param>
-        /// <param name="quotecntr">This is quotecntr.</param>
-        /// <returns></returns>
-        public static RestRequest GETRequest(string brandName, string quotecntr)
-        {
-            restRequest = new RestRequest(Method.GET);
-            restRequest.AddParameter("brand", brandName, ParameterType.UrlSegment);
-            restRequest.AddParameter("quotecntr", quotecntr, ParameterType.UrlSegment);
-            restRequest.AddHeader("Accept", "application/json");
-            return restRequest;
-        }
-
-        /// <summary>
-        /// Create request with brandName and  quotecntr
-        /// </summary>
-        /// <param name="brandName">This is brand name.</param>
-        /// <param name="quotecntr">This is leaseid.</param>
-        ///<param name="vehiclerego">This is vehiclerego.</param>
-        /// <returns>restRequest</returns>
-        public static RestRequest GETRequest(string brandName, string leaseid, string vehiclerego)
-        {
-            restRequest = new RestRequest(Method.GET);
-            restRequest.AddParameter("brand", brandName, ParameterType.UrlSegment);
-            restRequest.AddParameter("leaseid", leaseid, ParameterType.UrlSegment);
-            restRequest.AddParameter("vehiclerego", vehiclerego, ParameterType.UrlSegment);
-            restRequest.AddHeader("Accept", "application/json");
-            return restRequest;
-        }
-
-        /// <summary>
-        /// Create request
-        /// </summary>
-        /// <param name="brandName">This is brand name.</param>
-        /// <param name="employeeid">This is employee ID</param>
-        /// <returns></returns>
-        public static RestRequest GETRequest(string brandName, int employeeid)
-        {
-            restRequest = new RestRequest(Method.GET);
-            restRequest.AddParameter("brand", brandName, ParameterType.UrlSegment);
-            restRequest.AddParameter("employeeid", employeeid, ParameterType.UrlSegment);
-            restRequest.AddHeader("Accept", "application/json");
             return restRequest;
         }
         #endregion GET Request
@@ -128,25 +55,16 @@ namespace Reqres.APITests.Utils
             return client.Execute(restRequest);
         }
 
-        /// <summary>
-        /// Get Response by enforcing TLS 1.2 on Targetprocess side
-        /// </summary>
-        /// <returns>IRestResponse</returns>
-        public static IRestResponse GetResponseTLSTargetprocess()
-        {
-            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol | System.Net.SecurityProtocolType.Tls12;
-            return client.Execute(restRequest);
-        }
-
+       
         #endregion GET Response
 
         #region POST Request
 
         /// <summary>
-        /// Rest request for RFQ lead service
+        /// Rest request for creating the users
         /// </summary>
-        /// <param name="_property">This is property object of RFQLeadServiceProperties class.</param>
-        /// <param name="Subscription_Key">This is Subscription key</param>
+        /// <param name="_property">This is property object of user</param>
+        
         /// <returns>Rest Request</returns>
         public static RestRequest ReqresAPICreateUserPostRequest(ReqresApipostCreateUserRequestProperties _property)
         {
@@ -177,10 +95,10 @@ namespace Reqres.APITests.Utils
         #region PUT Request
 
         /// <summary>
-        /// Rest request for OrderFuelCardSherlockRequestProperties
+        /// Rest request for updating the Single users details using put
         /// </summary>
-        /// <param name="_property">This is property of OrderFuelCardSherlockRequestProperties</param>
-        /// <param name="Subscription_Key">This is Subscription key</param>
+        /// <param name="_property">This is property of user</param>
+        
         /// <returns>Rest Request</returns>
         public static RestRequest ReqresAPIPUTSingleUsePostRequest(ReqresApipostCreateUserRequestProperties _property)
         {
@@ -194,10 +112,10 @@ namespace Reqres.APITests.Utils
 
         #region PATCH Request
         /// <summary>
-        /// Rest request for OrderFuelCardSherlockRequestProperties
+        /// Rest request for updating the Single users details using put
         /// </summary>
-        /// <param name="_property">This is property of OrderFuelCardSherlockRequestProperties</param>
-        /// <param name="Subscription_Key">This is Subscription key</param>
+        /// <param name="_property">This is property of user</param>
+        
         /// <returns>Rest Request</returns>
         public static RestRequest ReqresAPIPATCHSingleUsePostRequest(ReqresApipostCreateUserRequestProperties _property)
         {
