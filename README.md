@@ -1,6 +1,6 @@
 # Reqres.API
  #REST APIs Testing using RestSharp, C#, SpecFlow.
-#Visual Studio 2017 is prefered.
+#Visual Studio 2017 is prefered,also we can use Visual Studio 2022(16.11.26) 
 #Add the local test setting in Test>Test Settings>Select the test setting file before executing the cases 
 #API Folder -consist the request ,response  and API services of the Reqres.
 #Tests folder consist the feature and definition files.
