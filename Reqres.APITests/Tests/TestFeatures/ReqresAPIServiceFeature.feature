@@ -13,6 +13,7 @@ Examples:
 | 3    | 201        | Lindsay    | Ferguson  | Lindsay Ferguson | lindsay.ferguson@reqres.in |
 | 2    | 200        | user01     | user01    | Lindsay Ferguson | lindsay.ferguson@gmail.in |
 | 2    | 200        | Janet      | Weaver    |Janet Weaver      |  janet.weaver@reqres.in| 
+| 2    | 200        | Abhi     | Ram    | Abhi Ram | AbhiRam@gmail.in |
 
 
 
